@@ -1,0 +1,681 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.estrellaproject.org/lkif-core/lkif-core.owl#"
+     xml:base="http://www.estrellaproject.org/lkif-core/lkif-core.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:norm="http://www.estrellaproject.org/lkif-core/norm.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:lrole="http://www.estrellaproject.org/lkif-core/legal-role.owl#"
+     xmlns:rules="http://www.estrellaproject.org/lkif-core/lkif-rules.owl#"
+     xmlns:laction="http://www.estrellaproject.org/lkif-core/legal-action.owl#"
+     xmlns:modification="http://www.estrellaproject.org/lkif-core/time-modification.owl#">
+    <owl:Ontology rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl">
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/legal-role.owl"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/norm.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+LKIF-Core, version 1.1, copyright (C) 2007, the ESTRELLA consortium
+</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+Partner contributions from the University of Amsterdam (UvA), the University of Bologna (UNIBO) and the Fraunhofer institute (FOKUS)
+
+Editor:       Rinke Hoekstra (UvA)
+Authors:      Rinke Hoekstra (UvA), Alexander Boer (UvA), Kasper van den Berg (UvA)
+Contributors: Joost Breuker (UvA), Thomas Gordon (FOKUS), Monica Palmirani (UNIBO), Rosella Rubino (UNIBO)
+</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work. 
+
+</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665
+</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#住址 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#住址">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#出生日期 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#出生日期">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#单位性质 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#单位性质">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#单位数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl#Organisation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#单位数据属性 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#单位数据属性"/>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#国籍 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#国籍">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#姓名 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#姓名">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#工作单位 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#工作单位">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#年龄 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#年龄">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#性别 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#性别">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#文化程度 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#文化程度">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#民族 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#民族">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#法定代表人 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#法定代表人">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#单位数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Legal_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#盲人 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#盲人">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#统一社会信用代码 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#统一社会信用代码">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#单位数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl#Organisation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#聋哑人 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#聋哑人">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#职业 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#职业">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#联系方式 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#联系方式">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#责任能力 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#责任能力">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#身份证号码 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#身份证号码">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#曾用名/别名/化名 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#曾用名/别名/化名">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#直接负责的主管人员/其他直接责任人员信息 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#直接负责的主管人员/其他直接责任人员信息">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#单位数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Unincorporated"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#籍贯/户籍地址 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#籍贯/户籍地址">
+        <rdfs:subPropertyOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#自然人类数据属性"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/action.owl#Action -->
+
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/action.owl#Action">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/process.owl#Physical_Process"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/action.owl#Agent -->
+
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/action.owl#Agent">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/process.owl#Physical_Object"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Action_Role_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Action_Role_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/legal-role.owl#Legal_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Application_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Application_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_of_System_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Certification_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Certification_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/norm.owl#Legal_Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Action_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Action_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Legal_Action_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Legal_Role_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Legal_Role_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/legal-role.owl#Legal_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Method_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Method_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Legal_Action_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Prepare_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Prepare_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Legal_Action_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Result_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Result_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Legal_Action_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Deregulation_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Deregulation_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_of_System_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Disallowed_Intention -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Disallowed_Intention">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Intention"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Dynamic_Temporal_Entity_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Dynamic_Temporal_Entity_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/time.owl#Temporal_Occurrence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Efficacy_Modification_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Efficacy_Modification_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Temporal_Modification_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Illegal_Intention_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Illegal_Intention_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Intention"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#In_Force_Modification_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#In_Force_Modification_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Temporal_Modification_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Integration_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Integration_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Textual_Modification_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Intention -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Intention">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/expression.owl#Propositional_Attitude"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Legal_Action_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Legal_Action_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Legally_Valid_Norm_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Legally_Valid_Norm_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/norm.owl#Norm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Public_Act"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_of_Meaning_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_of_Meaning_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Semantic_Annotation_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_of_Scope_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_of_Scope_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Semantic_Annotation_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_of_System_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_of_System_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Semantic_Annotation_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Normative_Article_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Normative_Article_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Legally_Valid_Norm_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Penalty_Role_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Penalty_Role_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/legal-role.owl#Legal_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Ratification_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Ratification_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_of_System_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Relocation_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Relocation_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Textual_Modification_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Remaking_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Remaking_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_of_System_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Repeal_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Repeal_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Textual_Modification_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Semantic_Annotation_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Semantic_Annotation_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Static_Temporal_Entity_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Static_Temporal_Entity_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/time.owl#Temporal_Occurrence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Substitution_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Substitution_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Textual_Modification_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Temporal_Modification_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Temporal_Modification_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Textual_Modification_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Textual_Modification_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#Transposition_b -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Transposition_b">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Modification_of_System_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#主犯 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#主犯">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Legal_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#从犯 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#从犯">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Legal_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#保险评估人 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#保险评估人">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Action_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#共犯 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#共犯">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Legal_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#具有完全责任能力的 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#具有完全责任能力的">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Penalty_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#具有部分责任能力的 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#具有部分责任能力的">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Penalty_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#受益人 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#受益人">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Action_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#实行犯 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#实行犯">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Legal_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#投保人 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#投保人">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Action_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#无责任能力的 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#无责任能力的">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Penalty_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#胁从犯 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#胁从犯">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Legal_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#被保险人 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#被保险人">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Action_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#被害人 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#被害人">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Criminal_Legal_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#证明人 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#证明人">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Action_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/lkif-core.owl#鉴定人 -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/lkif-core.owl#鉴定人">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl#Action_Role_b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/norm.owl#Legal_Document -->
+
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/norm.owl#Legal_Document">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/process.owl#Physical_Object"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
